@@ -59,6 +59,20 @@
       background-image: url("images/stefan_at_desk.png?v=1");
       background-size: cover; background-position: center; background-repeat: no-repeat;
     }
+    /* Phone-sized screens (portrait): push focus right + a bit upward */
+@media (max-width: 480px) and (orientation: portrait){
+  #home{
+    /* X  Y  → higher Y moves the crop up */
+    background-position: 80% 32%;
+  }
+}
+
+/* Small tablets / large phones */
+@media (min-width: 481px) and (max-width: 768px){
+  #home{
+    background-position: 85% 38%;
+  }
+}
     #home::after{
       content:""; position:absolute; inset:0; pointer-events:none;
       background: linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.18) 45%, rgba(0,0,0,.10));
